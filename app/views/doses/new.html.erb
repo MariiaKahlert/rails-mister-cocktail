@@ -1,0 +1,7 @@
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+<%= f.input :description, required: true %>
+<%= f.association :ingredient %>
+<%= f.submit %>
+<% end %>
+
+<!-- TODO LINK BACK-->
