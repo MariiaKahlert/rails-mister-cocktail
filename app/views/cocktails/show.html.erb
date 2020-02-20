@@ -1,0 +1,8 @@
+<h2><%= @cocktail.name %></h2>
+<ul>
+  <% @cocktail.ingredients.each do |i|%>
+    <%= i.name %> <!-- TODO --> <!-- TO_CHECK -->
+  <% end %>
+</ul>
+
+<%= link_to 'See all cocktails', root_path %>
