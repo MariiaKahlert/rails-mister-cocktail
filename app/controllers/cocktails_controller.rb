@@ -1,4 +1,7 @@
 class CocktailsController < ApplicationController
+  def home
+  end
+
   def index
     @cocktails = Cocktail.all
   end

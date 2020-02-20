@@ -1,8 +1,10 @@
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <!-- TODO -->
-  <%= f.input :picture %>
-  <%= f.submit %>
-<% end %>
-
-<%= link_to 'Back', root_path %>
+<div class="container">
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name %>
+    <!-- TODO -->
+    <%= f.input :picture %>
+     <%= f.button :submit, class: "btn-primary" %>
+  <% end %>
+  <br>
+  <%= link_to '<<', cocktails_path %>
+</div>

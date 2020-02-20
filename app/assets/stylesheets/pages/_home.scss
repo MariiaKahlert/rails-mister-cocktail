@@ -1,1 +1,12 @@
 // Specific CSS for your home-page
+#container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  .btn-primary {
+    color: white;
+    background-color: #44344F;
+    border-color: #44344F;
+  }
+}
