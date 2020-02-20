@@ -1,8 +1,10 @@
 <h1>Cocktails</h1>
-<ul>
+
   <% @cocktails.each do |c| %>
-    <li><%= link_to c.name, cocktail_path(c) %></li> <!-- TODO -->
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= c.picture %>)">
+  <%= link_to c.name, cocktail_path(c) %>
+    </div>
   <% end %>
-</ul>
+
 
 <%= link_to "Add a cocktail", new_cocktail_path%>
