@@ -1,9 +1,12 @@
-<div class="container">
-  <%= simple_form_for @cocktail do |f| %>
-    <%= f.input :name %>
-    <%= f.input :photo, as: :file %>
-     <%= f.button :submit, class: "btn-primary" %>
-  <% end %>
-  <br>
-  <%= link_to '<<', cocktails_path %>
+<div class="container form-link">
+  <div class="form-container">
+    <%= simple_form_for @cocktail do |f| %>
+      <%= f.input :name %>
+      <%= f.input :photo, as: :file %>
+       <%= f.button :submit, class: "btn-primary" %>
+    <% end %>
+    <div class="link-container">
+      <%= link_to '<<', root_path %>
+    </div>
+  </div>
 </div>

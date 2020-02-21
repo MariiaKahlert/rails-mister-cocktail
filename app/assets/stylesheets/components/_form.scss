@@ -1,0 +1,26 @@
+.form-link {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .btn-primary {
+    margin-bottom: 1rem;
+    color: white;
+    background-color: #44344F;
+    border-color: #44344F;
+    transition: 0.2s;
+    &:hover {
+      background-color: #6f5d7c;
+      border-color: #6f5d7c;
+    }
+  }
+  .link-container a {
+    color: #44344F;
+    text-decoration: none;
+    transition: 0.2s;
+    &:hover {
+      color: #6f5d7c;
+    }
+  }
+}

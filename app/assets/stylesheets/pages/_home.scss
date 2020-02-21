@@ -1,12 +1,20 @@
 // Specific CSS for your home-page
-#container {
+#container-banner {
   display: flex;
   align-items: center;
   height: 100vh;
   justify-content: center;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  background-repeat: no-repeat;
   .btn-primary {
     color: white;
     background-color: #44344F;
     border-color: #44344F;
+    &:hover {
+      background-color: #6f5d7c;
+      border-color: #6f5d7c;
+    }
   }
 }
