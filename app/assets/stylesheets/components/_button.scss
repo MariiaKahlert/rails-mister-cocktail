@@ -4,7 +4,7 @@
     background-color: #D8973C;
     border-color: #D8973C;
     transition: 0.2s;
-    &:hover, &:not(:disabled):not(.disabled):active {
+    &:hover, &:not(:disabled):not(.disabled):active, &:focus {
       background-color: #E6BC82;
       border-color: #E6BC82;
     }
