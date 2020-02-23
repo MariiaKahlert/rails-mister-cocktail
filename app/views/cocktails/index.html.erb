@@ -1,12 +1,21 @@
-<div class="container">
-  <!-- <h1>Cocktails</h1> -->
+<div class="container container-cocktails">
 
-    <% @cocktails.each do |c| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path c.photo.key %>')">
-    <!-- TODO URL --> <%= link_to c.name, cocktail_path(c) %>
+    <% @cocktails.each_slice(3) do |group| %>
+      <div class="row row-container">
+        <% group.each do |c| %>
+        <div class="col-sm-12 col-md-4">
+        <%= link_to cocktail_path(c), class: "link-for-card" do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path c.photo.key %>')">
+          <%= c.name %>
+          </div>
+        <% end %>
+        </div>
+        <% end %>
       </div>
     <% end %>
   <br>
-  <%= link_to "<<", root_path %>
+  <div class="link-container">
+    <%= link_to "Back to the home page", root_path %>
+  </div>
 </div>
 

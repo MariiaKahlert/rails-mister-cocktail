@@ -5,6 +5,12 @@
     <li>(<%= d.description %>) <%= d.ingredient.name%> <%= link_to "Delete dose", dose_path(d), method: :delete %></li>
   <% end %>
 </ul>
-<%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail) %>
-<br>
+
+<h3>Add a dose:</h3>
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+<%= f.input :description %>
+<%= f.association :ingredient %>
+<%= f.submit %>
+<% end %>
+
 <%= link_to 'See all cocktails', cocktails_path %>

@@ -1,4 +1,4 @@
-.form-link {
+.form-link-container {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -7,20 +7,21 @@
   .btn-primary {
     margin-bottom: 1rem;
     color: white;
-    background-color: #44344F;
-    border-color: #44344F;
+    background-color: #D8973C;
+    border-color: #D8973C;
     transition: 0.2s;
-    &:hover {
-      background-color: #6f5d7c;
-      border-color: #6f5d7c;
+    &:hover, &:not(:disabled):not(.disabled):active {
+      background-color: #E6BC82;
+      border-color: #E6BC82;
     }
   }
-  .link-container a {
-    color: #44344F;
-    text-decoration: none;
-    transition: 0.2s;
-    &:hover {
-      color: #6f5d7c;
-    }
+}
+
+.link-container a {
+  color: #D8973C;
+  text-decoration: none;
+  transition: 0.2s;
+  &:hover {
+    color: #E6BC82;
   }
 }
