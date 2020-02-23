@@ -1,0 +1,22 @@
+.link-to-all-cocktails {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.ingredients-list {
+  list-style: none;
+  padding: 0;
+  .fas {
+    margin-right: 5px;
+  }
+  .far {
+    margin-left: 5px;
+  }
+}
+
+.delete-cocktail {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  font-size: 25px;
+}

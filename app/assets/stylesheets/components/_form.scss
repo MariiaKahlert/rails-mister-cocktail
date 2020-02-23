@@ -4,24 +4,4 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .btn-primary {
-    margin-bottom: 1rem;
-    color: white;
-    background-color: #D8973C;
-    border-color: #D8973C;
-    transition: 0.2s;
-    &:hover, &:not(:disabled):not(.disabled):active {
-      background-color: #E6BC82;
-      border-color: #E6BC82;
-    }
-  }
-}
-
-.link-container a {
-  color: #D8973C;
-  text-decoration: none;
-  transition: 0.2s;
-  &:hover {
-    color: #E6BC82;
-  }
 }

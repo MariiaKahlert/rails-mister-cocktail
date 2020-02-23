@@ -8,20 +8,15 @@
   background-position: center;
   object-fit: cover;
   background-repeat: no-repeat;
+
   .btn-container {
     display: flex;
     flex-direction: column;
+
     .btn-primary {
-      color: white;
-      background-color: #D8973C;
-      border-color: #D8973C;
       font-size: 22px;
       width: 200px;
       margin: 5px auto;
-      &:hover {
-        background-color: #E6BC82;
-        border-color: #E6BC82;
-      }
     }
   }
 }

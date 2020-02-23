@@ -1,0 +1,14 @@
+.btn-primary {
+    margin-bottom: 1rem;
+    color: white;
+    background-color: #D8973C;
+    border-color: #D8973C;
+    transition: 0.2s;
+    &:hover, &:not(:disabled):not(.disabled):active {
+      background-color: #E6BC82;
+      border-color: #E6BC82;
+    }
+    &:focus, &:not(:disabled):not(.disabled):active:focus {
+      box-shadow: none;
+    }
+  }

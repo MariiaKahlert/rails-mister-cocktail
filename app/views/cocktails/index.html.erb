@@ -4,7 +4,7 @@
       <div class="row row-container">
         <% group.each do |c| %>
         <div class="col-sm-12 col-md-4">
-        <%= link_to cocktail_path(c), class: "link-for-card" do %>
+          <%= link_to cocktail_path(c), class: "link-for-card" do || %>
           <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path c.photo.key %>')">
           <%= c.name %>
           </div>

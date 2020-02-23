@@ -1,16 +1,44 @@
-<h2><%= @cocktail.name %></h2>
-<%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
-<ul>
-  <% @cocktail.doses.each do |d|%>
-    <li>(<%= d.description %>) <%= d.ingredient.name%> <%= link_to "Delete dose", dose_path(d), method: :delete %></li>
+<div class="banner-cocktail" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cloudinary_url @cocktail.photo.key %>');">
+  <div class="container-cocktail-name">
+    <h1><%= @cocktail.name %></h1>
+  </div>
+  <%= link_to cocktail_path(@cocktail), method: :delete, class: 'delete-cocktail' do || %>
+    <i class="far fa-trash-alt"></i>
   <% end %>
-</ul>
+</div>
 
-<h3>Add a dose:</h3>
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-<%= f.input :description %>
-<%= f.association :ingredient %>
-<%= f.submit %>
-<% end %>
+<div class="container container-cocktail-doses my-4">
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <div class="dose-list">
+        <h3>Ingredients:</h3>
+        <ul class="ingredients-list">
+          <% @cocktail.doses.each do |d|%>
+            <li><i class="fas fa-cocktail"></i> (<%= d.description %>) <%= d.ingredient.name%>
+              <%= link_to dose_path(d), method: :delete do || %>
+                <i class="far fa-trash-alt"></i>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
 
-<%= link_to 'See all cocktails', cocktails_path %>
+    <div class="col-sm-12 col-md-6">
+      <div class="add-dose">
+        <h3>Add a dose:</h3>
+        <%= simple_form_for [@cocktail, @dose] do |f| %>
+        <%= f.input :description %>
+        <%= f.association :ingredient %>
+        <%= f.submit %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="link-to-all-cocktails">
+  <%= link_to 'See all cocktails', cocktails_path, class: 'btn btn-primary' %>
+</div>
+
