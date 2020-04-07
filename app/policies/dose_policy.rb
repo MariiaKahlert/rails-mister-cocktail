@@ -6,14 +6,16 @@ class DosePolicy < ApplicationPolicy
   end
 
   def create?
-    if user.nil?
-      false
-    else
-      record.cocktail.user == user || user.admin
-    end
+    logged_in_user_owner_or_admin?
   end
 
   def destroy?
+    logged_in_user_owner_or_admin?
+  end
+
+  private
+
+  def logged_in_user_owner_or_admin?
     if user.nil?
       false
     else
