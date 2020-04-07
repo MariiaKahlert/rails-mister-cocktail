@@ -1,4 +1,6 @@
 class CocktailsController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[home index show]
+
   def home
   end
 
