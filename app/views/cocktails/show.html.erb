@@ -2,8 +2,10 @@
   <div class="container-cocktail-name">
     <h1><%= @cocktail.name %></h1>
   </div>
-  <%= link_to cocktail_path(@cocktail), method: :delete, class: 'delete-cocktail' do || %>
-    <i class="far fa-trash-alt"></i>
+  <% if user_signed_in? && policy(@cocktail).destroy? %>
+    <%= link_to cocktail_path(@cocktail), method: :delete, class: 'delete-cocktail' do || %>
+      <i class="far fa-trash-alt"></i>
+    <% end %>
   <% end %>
 </div>
 

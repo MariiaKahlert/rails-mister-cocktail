@@ -40,6 +40,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'devise'
+gem 'pundit'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'cloudinary', '~> 1.12.0'
