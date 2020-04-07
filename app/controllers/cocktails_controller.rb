@@ -1,9 +1,6 @@
 class CocktailsController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[home index show]
+  skip_before_action :authenticate_user!, only: %i[index show]
   before_action :set_cocktail, only: %i[show destroy]
-
-  def home
-  end
 
   def index
     # @cocktails = Cocktail.all
@@ -12,6 +9,7 @@ class CocktailsController < ApplicationController
 
   def show
     @dose = Dose.new
+    @dose.cocktail = @cocktail
   end
 
   def new
@@ -31,7 +29,6 @@ class CocktailsController < ApplicationController
   end
 
   def destroy
-    authorize @cocktail
     @cocktail.destroy
     redirect_to cocktails_path
   end

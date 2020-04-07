@@ -10,6 +10,10 @@ class CocktailPolicy < ApplicationPolicy
   end
 
   def destroy?
-    record.user == user || user.admin
+    if user.nil?
+      false
+    else
+      record.user == user || user.admin
+    end
   end
 end
