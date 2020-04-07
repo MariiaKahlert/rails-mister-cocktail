@@ -1,9 +1,5 @@
 class DosesController < ApplicationController
-  before_action :set_cocktail_for_doses, only: %i[new create]
-
-  def new
-    @dose = Dose.new
-  end
+  before_action :set_cocktail_for_doses, only: %i[create]
 
   def create
     @dose = Dose.new(dose_params)
