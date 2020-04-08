@@ -1,12 +1,9 @@
-<div class="form-link-container">
+<div class="form-link-container d-flex flex-column justify-content-center align-items-center">
   <div class="form-container">
     <%= simple_form_for @cocktail do |f| %>
       <%= f.input :name %>
       <%= f.input :photo, as: :file %>
        <%= f.button :submit, class: "btn-primary" %>
     <% end %>
-    <div class="link-container">
-      <%= link_to 'Go back', root_path %>
-    </div>
   </div>
 </div>
