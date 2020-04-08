@@ -1,12 +1,12 @@
 .btn-primary {
     margin-bottom: 1rem;
     color: white;
-    background-color: #D8973C;
-    border-color: #D8973C;
+    background-color: $main-yellow;
+    border-color: $main-yellow;
     transition: 0.2s;
     &:hover, &:not(:disabled):not(.disabled):active, &:focus {
-      background-color: #E6BC82;
-      border-color: #E6BC82;
+      background-color: $hover-yellow;
+      border-color: $hover-yellow;
     }
     &:focus, &:not(:disabled):not(.disabled):active:focus {
       box-shadow: none;
