@@ -1,22 +1,46 @@
 // Specific CSS for your home-page
 .container-banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
   background-size: cover;
   background-position: center;
   object-fit: cover;
   background-repeat: no-repeat;
-
-  .btn-container {
-    display: flex;
-    flex-direction: column;
-
-    .btn-primary {
-      font-size: 22px;
-      width: 200px;
-      margin: 5px auto;
-    }
+  .btn-primary {
+    font-size: 22px;
+    width: 200px;
+    margin: 5px auto;
   }
 }
+
+.diamond {
+  position: relative;
+  height: 325px;
+  width: 325px;
+  line-height: 200px;
+  text-align: center;
+  margin: 10px 40px;
+  color: white;
+  &:before {
+    background-color: white;
+    opacity: 0.3;
+    position: absolute;
+    content: '';
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    transform: rotateX(45deg) rotateZ(45deg);
+  }
+  &:after {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    content: '';
+    height: calc(100% - 22px);  /* -22px is 2 * 10px gap on either side - 2px border on either side */
+    width: calc(100% - 22px);  /* -22px is 2 * 10px gap on either side - 2px border on either side */
+    border: 1px solid #D8973C;
+    transform: rotateX(45deg) rotateZ(45deg);
+  }
+}
+
+
